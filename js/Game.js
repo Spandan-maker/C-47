@@ -167,6 +167,15 @@ class Game {
       if(fireGroup.isTouching(fireGroup2)){
         fireGroup.destroyEach();
         fireGroup2.destroyEach();
+
+        player.Update();
+      }
+
+      if(fireGroup2.isTouching(pacs)){
+        score = score-1;
+        fireGroup2.destroyEach();
+
+        player.Update();
       }
 
 
