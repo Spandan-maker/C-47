@@ -242,6 +242,21 @@ class Game {
         player.update();
       }
 
+      if(pac1.x > 800 || (pac1.x < 10 || (pac1.y > 700 ||(pac1.y < 10)))){
+        pac1.distance = 500;
+        pac1.Ydistance = 500;
+
+        player.update();
+      }
+
+      if(pac2.x > 800 || (pac2.x < 10 || (pac2.y > 700 ||(pac2.y < 10)))){
+        pac2.distance = 500;
+        pac2.Ydistance = 500;
+
+        player.update();
+      }
+
+
       if(score === target){
         target = target+10;
 
