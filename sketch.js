@@ -8,7 +8,7 @@ var END = 2
 
 var pacs
 
-var ghostImg1, fireImg1, fireImg2
+var ghostImg1,ghostImg2, fireImg1, fireImg2, powerup, powerupImg
 var score = 0;
 var target = 10;
 var lives = 3;
@@ -21,9 +21,12 @@ function preload(){
     Background = loadImage("images/Background.jpg");
 
     ghostImg1 = loadImage("images/Ghost1.png");
+    ghostImg2 = loadImage("images/Ghost2.png");
 
     fireImg1 = loadImage("images/fireball1.png");
     fireImg2 = loadImage("images/fireball2.png");
+    
+    powerupImg = loadImage("images/PowerUp.png");
 
     explosionSound = loadSound("sound/explosion.wav");
     shootSound = loadSound("sound/shoot.wav");
@@ -38,6 +41,8 @@ function setup(){
 
     fireGroup = createGroup();
     fireGroup2 = createGroup();
+
+    powerGroup = createGroup();
 
     database = firebase.database();
 
